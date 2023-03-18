@@ -1,0 +1,28 @@
+import time
+
+
+def problem_solver(young, old, comparison_of_young_to_old):
+    years = 0
+    while comparison_of_young_to_old * young != old:
+        young += 1
+        old += 1
+        years += 1
+        if years == 100:
+            print("Scanning...")
+            time.sleep(3)
+            print("At age 100. There's only a select number of people that have hit this age!\n")
+            time.sleep(3)
+
+        elif years == 500:
+            print("At age 500... This is definitely an impossible age to reach.\n")
+            time.sleep(3)
+
+        elif years == 1000:
+            print("At 1000... One can only look so far into the future, my friend.")
+            print("Going to have to call it a day at this point.")
+            quit()
+
+    print(f"The second person will be {comparison_of_young_to_old} times older in {years} year(s)")
+
+
+problem_solver(7, 45, 2)

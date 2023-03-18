@@ -1,0 +1,13 @@
+def pattern_maker(i=0):
+    try:
+        baseline = int(input("\nEnter the baseline number of characters here: "))
+        for space in range(baseline, 0, -2):
+            print(i * " " + space * "*")
+            i += 1
+
+    except ValueError:
+        print("--- PLEASE ENTER AN INTEGER BASELINE VALUE ---")
+        pattern_maker()
+
+
+pattern_maker()
